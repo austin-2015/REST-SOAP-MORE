@@ -22,3 +22,11 @@
 ##### The state of resource at any particular timestamp is known as resource representation. A representation consists of data, metadata describing the data and hypermedia links which can help the clients in transition to next desired state.
 
 ##### The data format of a representation is known as a media type. The media type identifies a specification that defines how a representation is to be processed. A truly RESTful API looks like hypertext. Every addressable unit of information carries an address, either explicitly (e.g., link and id attributes) or implicitly (e.g., derived from the media type definition and representation structure).
+
+## VERY IMPORTANT
+
+### According to Roy Fielding:
+
+```Hypertext (or hypermedia) mean the simultaneous presentation of information and controls such that the information becomes the affordance through which the user (or automaton) obtains choices and selects actions. Remember that hypertext does not need to be HTML (or XML or JSON) on a browser. Machines can follow links when they understand the data format and relationship types.```
+
+##### Further, resource representations shall be self-descriptive: the client does not need to know if a resource is employee or device. It should act on basis of media-type associated with resource. So in practice, you will end up creating lots of custom media-types – normally one media-type associated with one resource.
