@@ -14,3 +14,26 @@ A REST API must not define fixed resource names or hierarchies (an obvious coupl
 A REST API should never have “typed” resources that are significant to the client. Specification authors may use resource types for describing server implementation behind the interface, but those types must be irrelevant and invisible to the client. The only types that are significant to a client are the current representation’s media type and standardized relation names. [ditto]
 A REST API should be entered with no prior knowledge beyond the initial URI (bookmark) and set of standardized media types that are appropriate for the intended audience (i.e., expected to be understood by any client that might use the API). From that point on, all application state transitions must be driven by client selection of server-provided choices that are present in the received representations or implied by the user’s manipulation of those representations. The transitions may be determined (or limited by) the client’s knowledge of media types and resource communication mechanisms, both of which may be improved on-the-fly (e.g., code-on-demand). [Failure here implies that out-of-band information is driving interaction instead of hypertext.]
 
+
+### IMPORTANT QUESTION AND FOLLOW-UP
+
+Clarification concerning Hypertext vs. Hypermedia: when you state that the API must be hypertext-drive, you’re not implying restrictions on the representation, but properties it must exhibit, namely the ability for connecting a representation to other resources and operations thereon, correct? Then, why no say hypermedia-driven to avoid any confusion with implying that REST would be restricted to HTML?
+
+Roy T. Fielding says:
+October 20, 2008 at 7:44 am
+I have a slide in my REST talk that explains what hypertext (and hypermedia) means.
+
+Hypertext has many definitions:
+
+Ted Nelson’s original definition was focused on non-linear documents.
+
+By ‘hypertext,’ I mean non-sequential writing — text that branches and allows choices to the reader, best read at an interactive screen. As popularly conceived, this is a series of text chunks connected by links which offer the reader different pathways. [Theodor H. Nelson]
+
+Later, hypertext became associated with a particular user interface mechanism.
+
+Hypertext is a computer-supported medium for information in which many interlinked
+documents are displayed with their links on a high-resolution computer screen. [Jeffrey Conklin]
+
+When I say hypertext, I mean the simultaneous presentation of information and controls such that the information becomes the affordance through which the user (or automaton) obtains choices and selects actions. Hypermedia is just an expansion on what text means to include temporal anchors within a media stream; most researchers have dropped the distinction.
+
+Hypertext does not need to be HTML on a browser. Machines can follow links when they understand the data format and relationship types.
