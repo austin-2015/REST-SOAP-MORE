@@ -2,6 +2,7 @@
 #### REST API Tutorial
 #### QUOTED EXCERPTS as of July 10, 2018
 #### Author unknown.   Date of Publication Unknown. 
+##### Latest known revision by Admin May 14, 2018
 
 #### What is REST
 ##### REST is acronym for REpresentational State Transfer. It is architectural style for distributed hypermedia systems and was first presented by Roy Fielding in 2000 in his famous dissertation.
@@ -30,3 +31,11 @@
 ```Hypertext (or hypermedia) mean the simultaneous presentation of information and controls such that the information becomes the affordance through which the user (or automaton) obtains choices and selects actions. Remember that hypertext does not need to be HTML (or XML or JSON) on a browser. Machines can follow links when they understand the data format and relationship types.```
 
 ##### Further, resource representations shall be self-descriptive: the client does not need to know if a resource is employee or device. It should act on basis of media-type associated with resource. So in practice, you will end up creating lots of custom media-types – normally one media-type associated with one resource.
+
+## ALSO VERY IMPORTANT
+
+### REST and HTTP are not same !!
+
+```In simplest words, in the REST architectural style, data and functionality are considered resources and are accessed using Uniform Resource Identifiers (URIs). The resources are acted upon by using a set of simple, well-defined operations. The clients and servers exchange representations of resources by using a standardized interface and protocol – typically HTTP.```
+
+```Resources are decoupled from their representation so that their content can be accessed in a variety of formats, such as HTML, XML, plain text, PDF, JPEG, JSON, and others. Metadata about the resource is available and used, for example, to control caching, detect transmission errors, negotiate the appropriate representation format, and perform authentication or access control.And most importantly, every interaction with a resource is stateless.```
